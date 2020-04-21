@@ -1,10 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài tập: Kiểm tra từ đối xứng</title>
 </head>
 <body>
+<script>
+    checkString();
 
+    function isPalindrome (str) {
+        debugger
+        if (str.length < 2)
+            return false;
+        for (let i = 0; i < str.length/2; i++) {
+            if (str[i] != str[str.length - 1 - i])
+                return false;
+        }
+        return true;
+    }
+
+    function checkString() {
+        let string = prompt("Enter a string : ");
+        alert("String added is: " + string);
+        if (isPalindrome(string)) {
+            alert(string + " is palindrome");
+        } else {
+            alert(string + " is not palindrome");
+        }
+    }
+</script>
 </body>
 </html>

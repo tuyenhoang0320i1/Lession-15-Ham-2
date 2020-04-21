@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập: Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+
+        if (number < 2)
+            return false;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    // let N = +prompt("Enter a number: ");
+    // if (isPrime(N)) {
+    //     alert(N + " is a Prime");
+    // } else {
+    //     alert(N + " is not a Prime ");
+    // }
+    // isPrime(N);
+    function displayPrimeListSmallerThan10000(num) {
+
+        let count = 0;
+        let i = 2;
+        while (count < num) {
+            if (isPrime(i) == true) {
+                document.write(i + ", ");
+                count++;
+            }
+            i++;
+        }
+    }
+    let N = +prompt("Enter No. of Prime display: ");
+    displayPrimeListSmallerThan10000(N);
+
+</script>
+</body>
+</html>
